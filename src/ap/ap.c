@@ -131,7 +131,7 @@ void apInit()
 
 void apMain()
 {
-    
+
     stdout = &OUTPUT;
     
     UART_Init();   
@@ -143,6 +143,7 @@ void apMain()
         {
             rxFlag = 0;             
             printf(rxBuff);
+            printf("\r");
         }
     }        
 }

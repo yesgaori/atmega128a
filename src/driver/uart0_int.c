@@ -1,5 +1,4 @@
 #include"./uart0_int.h"
-#include"../common/def.h"
 
 // 출력 스트림 설정
 FILE OUTPUT = FDEV_SETUP_STREAM(UART_Transmit, NULL, _FDEV_SETUP_WRITE);
@@ -31,8 +30,8 @@ void UART_Init()
     UBRR0L = 0xCF;   // 9600bps 
     
     UCSR0A |= (1 << U2X0);   // 2배속 모드
-    UCSR0B |= (1 << RXCIE0)|(1 << TXEN0)|(1 << RXCIE0);   // 수신 인터럽트 활성화, 수신, 송신 활성화 Rx, Tx
-    
+    UCSR0B |= (1 << RXEN0)|(1 << TXEN0)|(1 << RXCIE0);   // 수신 인터럽트 활성화, 수신, 송신 활성화 Rx, Tx
+    UCSR0C |= (1<<UCSZ01)|(1<<UCSZ00);
 }
 
 void UART_Transmit(char data)
@@ -41,6 +40,7 @@ void UART_Transmit(char data)
     {
 
     };
+
     UDR0 = data;
 }
 
