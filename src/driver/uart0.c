@@ -20,16 +20,18 @@ void UART0_Init()
 
 void UART0_Transmit(char data)
 {
-    while(!(UCSR0A) & (1 << UDRE0));     //송신 가능 ??? UDR이 비어있는지?
+    while(!(UCSR0A & (1 << UDRE0)));     //송신 가능 ??? UDR이 비어있는지?
     
         UDR0 = data;
 
 }
 
-unsigned UART0_Recive()
+unsigned UART0_Receive()
 {
-    while(!(UCSR0A & (1 << RXC0)));     // 데이터 수신 대기
-    
+    while(!(UCSR0A & (1 << RXC0)))     // 데이터 수신 대기
+    {
+
+    };
         return UDR0;    
     
 }

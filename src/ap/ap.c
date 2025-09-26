@@ -61,27 +61,88 @@ void apInit()
 //     }
 // }
 
+// void apMain()
+// {
+//     UART0_Init();
+
+//     DDRA = 0xff;
+
+//     char data;
+
+//     uint16_t fndData[10] = {0x3f, 0x06, 0x5b, 0x4f, 0x66, 0x6d, 0x7d, 0x27, 0x7f, 0x67};
+    
+
+//     while (1)
+//     {
+//         data = UART0_Receive();
+//         UART0_Transmit(data);
+        
+//         //7세그먼트
+//         switch(data)
+//         {
+//             case'0':
+//                 PORTA = fndData[0];
+//                 break;
+            
+//             case'1':
+//                 PORTA = fndData[1];
+//                 break;
+            
+//             case'2':
+//                 PORTA = fndData[2];
+//                 break;
+//             case'3':
+//                 PORTA = fndData[3];
+//                 break;
+//             case'4':
+//                 PORTA = fndData[4];
+//                 break;
+//             case'5':
+//                 PORTA = fndData[5];
+//                 break;    
+//             case'6':
+//                 PORTA = fndData[6];
+//                 break;
+//             case'7':
+//                 PORTA = fndData[7];
+//                 break;
+//             case'8':
+//                 PORTA = fndData[8];
+//                 break;
+//             case'9':
+//                 PORTA = fndData[9];
+//                 break;
+                    
+//         }
+        
+
+        
+
+//     }
+    
+// }
+
+
+
+
+
+
+
+
 void apMain()
 {
-    UART0_Init();
-
-    DDRD = 0xff;
-
-    char data;
+    
+    stdout = &OUTPUT;
+    
+    UART_Init();   
+    sei();
 
     while (1)
     {
-        data = UART0_Recive();
-        UART0_Transmit(data);
-        if(data == 'a')
+        if(rxFlag == 1)
         {
-            PORTD = 0xff;
+            rxFlag = 0;             
+            printf(rxBuff);
         }
-        else
-        {
-            PORTD = 0x00;
-        }
-
-    }
-    
+    }        
 }

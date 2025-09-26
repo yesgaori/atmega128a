@@ -1,6 +1,5 @@
-#include <stdio.h>
-#include <avr/io.h>
-#include <util/delay.h>
+#include "./src/common/def.h"
+
 
 // int main()
 // {
@@ -224,8 +223,6 @@
 //  }
 
 
-#include<avr/io.h>            // I/O 입출력에 관계 된 헤더파일
-#include<util/delay.h>        // 딜레이 함수에 관계 된 헤더파일
 
 #define LED_DDR DDRD
 #define LED_PORT PORTD
@@ -404,6 +401,7 @@
 
 int main()
 {
+
    apInit();
    apMain();
    

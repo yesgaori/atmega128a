@@ -2,5 +2,5 @@
 
 
 void UART0_Init();
-void UART_Transmit(char data);
-unsigned UAT0_Recive();
+void UART0_Transmit(char data);
+unsigned UART0_Receive();
