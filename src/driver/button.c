@@ -1,7 +1,7 @@
 #include "./button.h"
 
 
-// BUTTON btnOn; -> BUTTON 이라는  데이터형의 변수 btnOn 선언 선언과 동시에 메모리 확보
+BUTTON bttnon; // -> BUTTON 이라는  데이터형의 변수 btnOn 선언 선언과 동시에 메모리 확보
 // buttonInit(&btnOn, &BUTTON_DDR, &BUTTON_PIN, &BUTTON_ON);
 
 void buttonInit(BUTTON *button, volatile uint8_t *ddr, volatile uint8_t *pin, uint8_t pinNum)

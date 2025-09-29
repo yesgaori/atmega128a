@@ -250,6 +250,30 @@ src/driver/led.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/atmega128a.elf.dir/build.make CMakeFiles/atmega128a.elf.dir/src/driver/led.c.s
 .PHONY : src/driver/led.c.s
 
+src/driver/pwm.obj: src/driver/pwm.c.obj
+.PHONY : src/driver/pwm.obj
+
+# target to build an object file
+src/driver/pwm.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/atmega128a.elf.dir/build.make CMakeFiles/atmega128a.elf.dir/src/driver/pwm.c.obj
+.PHONY : src/driver/pwm.c.obj
+
+src/driver/pwm.i: src/driver/pwm.c.i
+.PHONY : src/driver/pwm.i
+
+# target to preprocess a source file
+src/driver/pwm.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/atmega128a.elf.dir/build.make CMakeFiles/atmega128a.elf.dir/src/driver/pwm.c.i
+.PHONY : src/driver/pwm.c.i
+
+src/driver/pwm.s: src/driver/pwm.c.s
+.PHONY : src/driver/pwm.s
+
+# target to generate assembly for a file
+src/driver/pwm.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/atmega128a.elf.dir/build.make CMakeFiles/atmega128a.elf.dir/src/driver/pwm.c.s
+.PHONY : src/driver/pwm.c.s
+
 src/driver/uart0.obj: src/driver/uart0.c.obj
 .PHONY : src/driver/uart0.obj
 
@@ -322,6 +346,9 @@ help:
 	@echo "... src/driver/led.obj"
 	@echo "... src/driver/led.i"
 	@echo "... src/driver/led.s"
+	@echo "... src/driver/pwm.obj"
+	@echo "... src/driver/pwm.i"
+	@echo "... src/driver/pwm.s"
 	@echo "... src/driver/uart0.obj"
 	@echo "... src/driver/uart0.i"
 	@echo "... src/driver/uart0.s"

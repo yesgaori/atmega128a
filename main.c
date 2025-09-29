@@ -1,4 +1,5 @@
 #include "./src/common/def.h"
+#include "./src/ap/ap.h"
 
 
 // int main()
@@ -235,7 +236,7 @@
 // void ledLeftShift(uint8_t *data);
 // void ledRightShift(uint8_t *data);
 
-#include "./src/ap/ap.h"
+
 
 
 // int main()
@@ -399,16 +400,159 @@
 // }
 
 
+
+ /**
+  * @brief CTC 모드에 대한
+  * 
+  */
+
+// int main()
+// {
+
+//    // apInit();
+//    // apMain();
+   
+//    // DDRB = 0xff;         // PB4로 출력 할꺼니까...
+//    DDRB |= (1 << PB4);     // PB4만 출력
+
+//    // TCCR0 = 0x1C;
+//    TCCR0 |= (1 << COM00) | (1 << WGM01) | (1 << CS02) | (1 << CS00);
+
+//    OCR0 = 249; // 구한 값
+
+//    while(1)
+//    {
+      // while((TIFR & 0x02) == 0);
+      // TIFR = 0x02;
+      // OCR0 = 249;
+         
+      
+//    }
+   
+   
+// }
+
+/**
+ * @brief 8bit Timer/ Counter : Nomal Mode
+ * 특징중에 하나가 특정핀이 아닌 일반핀에서 구형파 발생.
+ * 250Hz 구형파 생성
+ * 분주비 : 128분주
+ * 2ms 마다 토글 시키면 250Hz 발생 (주기는 4ms 이니까)
+ * 16MHz = 0. 000 000 0625 (62.5ns)
+ * 128분주 하면 => 0.000 008 됨
+ * 0.002 = 0.000 002 * N (카운트 개수)
+ * 대충 계산하면 .... count를 250개 하면 됨.
+ * 그래서 256 - 250은 6 이므로
+ * TCNT 값을 6부터 시작하면 됨.
+ */
+
+
+// int main()
+// {
+
+//    DDRD |= (1 << 0);          // PORTD0 에서 출력
+//    PORTD &= ~(1 << 0);        // PORTD0 LOW로 출발
+
+//    // Normal Mode, 128분주
+//    TCCR0 |= (1 << CS02 ) | (1 << CS00);
+
+//    TCNT0 = 6;
+
+//    while(1)
+//    {
+      // while((TIFR & 0x01) == 0);
+      // PORTD = ~PORTD;
+      // TCNT0 = 6;
+      // TIFR = 0x01;      //clear
+
+//    }
+// }
+
+/**
+ * @brief Fast PWM Mode
+ * 
+ * 논인버티 모드
+ * 분주비 256
+ * 클럭 예상: 244.14 Hz
+ * OCR 값을 변경 해보자...
+ * 
+ */
+
+
+// main()
+// {
+
+//    DDRB |= (1 << PB4);
+
+//    // Fast PWM, 비반전 , 256분주
+//    TCCR0 |= (1 << WGM00) | (1 << COM01) | (1 << WGM01) | (1 << CS02) | (1 << CS01);
+
+//    OCR0 = 127;
+
+
+
+//    while(1)
+//    {
+//       for(uint8_t i = 0; i < 255; i++)
+//       {
+//          OCR0 = i;
+//          _delay_ms(10);
+//       }
+//    }
+
+
+// }
+
+/**
+ * @brief 과제 1 PWM으로 선풍기 제작
+ * 
+ * 버튼 3개 이용
+ * 버튼1 : 정지
+ * 버튼2 : 1단 (50% 속도)
+ * 버튼3 : 2단 (100% 속도)
+ * 
+ */
+
 int main()
 {
-
    apInit();
    apMain();
-   
+
    while(1)
    {
-      
+
    }
-   
-   
 }
+
+/**
+ * @brief  16비트 타이머/카운터 past PWM
+ * 
+ * 64분주 , 100Hz 주파수 생성
+ * 계산 결과 -> TOP : 2499
+ * 
+ */
+
+//  int main()
+//  {
+
+//    DDRB |= (1 << PB5);        //PWM 신호가 나갈 PORT 출력 선언
+
+//    TCCR1A |= (1 << COM1A1) | (1 << WGM11);
+//    TCCR1B |= (1 << WGM13) | (1 << WGM12) | (1 << CS11) | (1 << CS10);
+//    // TCCR1C |=
+
+//    ICR1 = 2499;
+
+//    OCR1A = 625;      // 25%      1250 -> 약 50%,   1875 -> 약 75% width
+
+
+//    while(1)
+//    {
+//       for(uint16_t i = 0; i < 2499; i++)
+//       {
+//          OCR1A = i;
+//          _delay_ms(5);
+//       }
+//    }
+//  }
+

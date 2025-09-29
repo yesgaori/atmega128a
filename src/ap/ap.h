@@ -5,6 +5,7 @@
 #include "../driver/fnd.h"
 #include "../driver/uart0.h"
 #include "../driver/uart0_int.h"
+#include "../driver/pwm.h"
 
 
 void apInit();
