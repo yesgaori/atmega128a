@@ -513,16 +513,16 @@
  * 
  */
 
-int main()
-{
-   apInit();
-   apMain();
+// int main()
+// {
+//    apInit();
+//    apMain();
 
-   while(1)
-   {
+//    while(1)
+//    {
 
-   }
-}
+//    }
+// }
 
 /**
  * @brief  16비트 타이머/카운터 past PWM
@@ -556,3 +556,60 @@ int main()
 //    }
 //  }
 
+// int main()
+// {
+//       apInit();
+//       apMain();
+
+//       while (1)
+//       {
+            
+//       }
+      
+// }
+
+/**
+ * @brief 
+ * 
+ */
+
+
+
+//   int main()
+//  {
+
+//    DDRB |= (1 << PB5);        //PWM 신호가 나갈 PORT 출력 선언
+
+//    TCCR1A |= (1 << COM1A1) | (1 << WGM11);
+//    TCCR1B |= (1 << WGM13) | (1 << WGM12) | (1 << CS11) | (1 << CS10);
+//    // TCCR1C |=
+
+//    ICR1 = 4999;
+
+   
+
+
+//    while(1)
+//    {
+//       OCR1A = 250;
+//       _delay_ms(1000);
+//       OCR1A = 375;
+//       _delay_ms(1000);
+//       OCR1A = 500;
+//       _delay_ms(1000);
+
+      
+//    }
+//  }
+
+int main()
+{
+      apInit();
+      apMain();
+
+      while(1)
+      {
+
+      }
+
+}

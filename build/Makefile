@@ -202,6 +202,30 @@ src/driver/button.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/atmega128a.elf.dir/build.make CMakeFiles/atmega128a.elf.dir/src/driver/button.c.s
 .PHONY : src/driver/button.c.s
 
+src/driver/delay_ms.obj: src/driver/delay_ms.c.obj
+.PHONY : src/driver/delay_ms.obj
+
+# target to build an object file
+src/driver/delay_ms.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/atmega128a.elf.dir/build.make CMakeFiles/atmega128a.elf.dir/src/driver/delay_ms.c.obj
+.PHONY : src/driver/delay_ms.c.obj
+
+src/driver/delay_ms.i: src/driver/delay_ms.c.i
+.PHONY : src/driver/delay_ms.i
+
+# target to preprocess a source file
+src/driver/delay_ms.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/atmega128a.elf.dir/build.make CMakeFiles/atmega128a.elf.dir/src/driver/delay_ms.c.i
+.PHONY : src/driver/delay_ms.c.i
+
+src/driver/delay_ms.s: src/driver/delay_ms.c.s
+.PHONY : src/driver/delay_ms.s
+
+# target to generate assembly for a file
+src/driver/delay_ms.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/atmega128a.elf.dir/build.make CMakeFiles/atmega128a.elf.dir/src/driver/delay_ms.c.s
+.PHONY : src/driver/delay_ms.c.s
+
 src/driver/fnd.obj: src/driver/fnd.c.obj
 .PHONY : src/driver/fnd.obj
 
@@ -226,6 +250,102 @@ src/driver/fnd.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/atmega128a.elf.dir/build.make CMakeFiles/atmega128a.elf.dir/src/driver/fnd.c.s
 .PHONY : src/driver/fnd.c.s
 
+src/driver/i2c.obj: src/driver/i2c.c.obj
+.PHONY : src/driver/i2c.obj
+
+# target to build an object file
+src/driver/i2c.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/atmega128a.elf.dir/build.make CMakeFiles/atmega128a.elf.dir/src/driver/i2c.c.obj
+.PHONY : src/driver/i2c.c.obj
+
+src/driver/i2c.i: src/driver/i2c.c.i
+.PHONY : src/driver/i2c.i
+
+# target to preprocess a source file
+src/driver/i2c.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/atmega128a.elf.dir/build.make CMakeFiles/atmega128a.elf.dir/src/driver/i2c.c.i
+.PHONY : src/driver/i2c.c.i
+
+src/driver/i2c.s: src/driver/i2c.c.s
+.PHONY : src/driver/i2c.s
+
+# target to generate assembly for a file
+src/driver/i2c.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/atmega128a.elf.dir/build.make CMakeFiles/atmega128a.elf.dir/src/driver/i2c.c.s
+.PHONY : src/driver/i2c.c.s
+
+src/driver/i2c_lcd.obj: src/driver/i2c_lcd.c.obj
+.PHONY : src/driver/i2c_lcd.obj
+
+# target to build an object file
+src/driver/i2c_lcd.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/atmega128a.elf.dir/build.make CMakeFiles/atmega128a.elf.dir/src/driver/i2c_lcd.c.obj
+.PHONY : src/driver/i2c_lcd.c.obj
+
+src/driver/i2c_lcd.i: src/driver/i2c_lcd.c.i
+.PHONY : src/driver/i2c_lcd.i
+
+# target to preprocess a source file
+src/driver/i2c_lcd.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/atmega128a.elf.dir/build.make CMakeFiles/atmega128a.elf.dir/src/driver/i2c_lcd.c.i
+.PHONY : src/driver/i2c_lcd.c.i
+
+src/driver/i2c_lcd.s: src/driver/i2c_lcd.c.s
+.PHONY : src/driver/i2c_lcd.s
+
+# target to generate assembly for a file
+src/driver/i2c_lcd.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/atmega128a.elf.dir/build.make CMakeFiles/atmega128a.elf.dir/src/driver/i2c_lcd.c.s
+.PHONY : src/driver/i2c_lcd.c.s
+
+src/driver/lcd_4bit.obj: src/driver/lcd_4bit.c.obj
+.PHONY : src/driver/lcd_4bit.obj
+
+# target to build an object file
+src/driver/lcd_4bit.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/atmega128a.elf.dir/build.make CMakeFiles/atmega128a.elf.dir/src/driver/lcd_4bit.c.obj
+.PHONY : src/driver/lcd_4bit.c.obj
+
+src/driver/lcd_4bit.i: src/driver/lcd_4bit.c.i
+.PHONY : src/driver/lcd_4bit.i
+
+# target to preprocess a source file
+src/driver/lcd_4bit.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/atmega128a.elf.dir/build.make CMakeFiles/atmega128a.elf.dir/src/driver/lcd_4bit.c.i
+.PHONY : src/driver/lcd_4bit.c.i
+
+src/driver/lcd_4bit.s: src/driver/lcd_4bit.c.s
+.PHONY : src/driver/lcd_4bit.s
+
+# target to generate assembly for a file
+src/driver/lcd_4bit.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/atmega128a.elf.dir/build.make CMakeFiles/atmega128a.elf.dir/src/driver/lcd_4bit.c.s
+.PHONY : src/driver/lcd_4bit.c.s
+
+src/driver/lcd_8bit.obj: src/driver/lcd_8bit.c.obj
+.PHONY : src/driver/lcd_8bit.obj
+
+# target to build an object file
+src/driver/lcd_8bit.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/atmega128a.elf.dir/build.make CMakeFiles/atmega128a.elf.dir/src/driver/lcd_8bit.c.obj
+.PHONY : src/driver/lcd_8bit.c.obj
+
+src/driver/lcd_8bit.i: src/driver/lcd_8bit.c.i
+.PHONY : src/driver/lcd_8bit.i
+
+# target to preprocess a source file
+src/driver/lcd_8bit.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/atmega128a.elf.dir/build.make CMakeFiles/atmega128a.elf.dir/src/driver/lcd_8bit.c.i
+.PHONY : src/driver/lcd_8bit.c.i
+
+src/driver/lcd_8bit.s: src/driver/lcd_8bit.c.s
+.PHONY : src/driver/lcd_8bit.s
+
+# target to generate assembly for a file
+src/driver/lcd_8bit.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/atmega128a.elf.dir/build.make CMakeFiles/atmega128a.elf.dir/src/driver/lcd_8bit.c.s
+.PHONY : src/driver/lcd_8bit.c.s
+
 src/driver/led.obj: src/driver/led.c.obj
 .PHONY : src/driver/led.obj
 
@@ -249,6 +369,30 @@ src/driver/led.s: src/driver/led.c.s
 src/driver/led.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/atmega128a.elf.dir/build.make CMakeFiles/atmega128a.elf.dir/src/driver/led.c.s
 .PHONY : src/driver/led.c.s
+
+src/driver/millis.obj: src/driver/millis.c.obj
+.PHONY : src/driver/millis.obj
+
+# target to build an object file
+src/driver/millis.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/atmega128a.elf.dir/build.make CMakeFiles/atmega128a.elf.dir/src/driver/millis.c.obj
+.PHONY : src/driver/millis.c.obj
+
+src/driver/millis.i: src/driver/millis.c.i
+.PHONY : src/driver/millis.i
+
+# target to preprocess a source file
+src/driver/millis.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/atmega128a.elf.dir/build.make CMakeFiles/atmega128a.elf.dir/src/driver/millis.c.i
+.PHONY : src/driver/millis.c.i
+
+src/driver/millis.s: src/driver/millis.c.s
+.PHONY : src/driver/millis.s
+
+# target to generate assembly for a file
+src/driver/millis.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/atmega128a.elf.dir/build.make CMakeFiles/atmega128a.elf.dir/src/driver/millis.c.s
+.PHONY : src/driver/millis.c.s
 
 src/driver/pwm.obj: src/driver/pwm.c.obj
 .PHONY : src/driver/pwm.obj
@@ -340,12 +484,30 @@ help:
 	@echo "... src/driver/button.obj"
 	@echo "... src/driver/button.i"
 	@echo "... src/driver/button.s"
+	@echo "... src/driver/delay_ms.obj"
+	@echo "... src/driver/delay_ms.i"
+	@echo "... src/driver/delay_ms.s"
 	@echo "... src/driver/fnd.obj"
 	@echo "... src/driver/fnd.i"
 	@echo "... src/driver/fnd.s"
+	@echo "... src/driver/i2c.obj"
+	@echo "... src/driver/i2c.i"
+	@echo "... src/driver/i2c.s"
+	@echo "... src/driver/i2c_lcd.obj"
+	@echo "... src/driver/i2c_lcd.i"
+	@echo "... src/driver/i2c_lcd.s"
+	@echo "... src/driver/lcd_4bit.obj"
+	@echo "... src/driver/lcd_4bit.i"
+	@echo "... src/driver/lcd_4bit.s"
+	@echo "... src/driver/lcd_8bit.obj"
+	@echo "... src/driver/lcd_8bit.i"
+	@echo "... src/driver/lcd_8bit.s"
 	@echo "... src/driver/led.obj"
 	@echo "... src/driver/led.i"
 	@echo "... src/driver/led.s"
+	@echo "... src/driver/millis.obj"
+	@echo "... src/driver/millis.i"
+	@echo "... src/driver/millis.s"
 	@echo "... src/driver/pwm.obj"
 	@echo "... src/driver/pwm.i"
 	@echo "... src/driver/pwm.s"

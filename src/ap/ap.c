@@ -1,9 +1,9 @@
-#include "ap.h"
+// #include "ap.h"
 
-void apInit()
-{
+// void apInit()
+// {
     
-}
+// }
 
 // void apMain()
 // {   
@@ -34,6 +34,13 @@ void apInit()
 
 // }
 
+// #include "ap.h"
+
+// void apInit()
+// {
+    
+// }
+
 // void apMain()
 // {
 
@@ -61,71 +68,87 @@ void apInit()
 //     }
 // }
 
-void apMain()
-{
-    UART0_Init();
 
-    DDRA = 0xff;
+// #include "ap.h"
+
+// void apInit()
+// {
     
-    char data;
+// }
 
-    uint16_t fndData[10] = {0x3f, 0x06, 0x5b, 0x4f, 0x66, 0x6d, 0x7d, 0x27, 0x7f, 0x67};
+
+// void apMain()
+// {
+//     UART0_Init();
+
+//     DDRA = 0xff;
+    
+//     char data;
+
+//     uint16_t fndData[10] = {0x3f, 0x06, 0x5b, 0x4f, 0x66, 0x6d, 0x7d, 0x27, 0x7f, 0x67};
     
 
-    while (1)
-    {
-        data = UART0_Receive();
-        UART0_Transmit(data);
+//     while (1)
+//     {
+//         data = UART0_Receive();
+//         UART0_Transmit(data);
         
-        //7세그먼트
-        switch(data)
-        {
-            case'0':
-                PORTA = fndData[0];
-                break;
+//         //7세그먼트
+//         switch(data)
+//         {
+//             case'0':
+//                 PORTA = fndData[0];
+//                 break;
             
-            case'1':
-                PORTA = fndData[1];
-                break;
+//             case'1':
+//                 PORTA = fndData[1];
+//                 break;
             
-            case'2':
-                PORTA = fndData[2];
-                break;
-            case'3':
-                PORTA = fndData[3];
-                break;
-            case'4':
-                PORTA = fndData[4];
-                break;
-            case'5':
-                PORTA = fndData[5];
-                break;    
-            case'6':
-                PORTA = fndData[6];
-                break;
-            case'7':
-                PORTA = fndData[7];
-                break;
-            case'8':
-                PORTA = fndData[8];
-                break;
-            case'9':
-                PORTA = fndData[9];
-                break;
+//             case'2':
+//                 PORTA = fndData[2];
+//                 break;
+//             case'3':
+//                 PORTA = fndData[3];
+//                 break;
+//             case'4':
+//                 PORTA = fndData[4];
+//                 break;
+//             case'5':
+//                 PORTA = fndData[5];
+//                 break;    
+//             case'6':
+//                 PORTA = fndData[6];
+//                 break;
+//             case'7':
+//                 PORTA = fndData[7];
+//                 break;
+//             case'8':
+//                 PORTA = fndData[8];
+//                 break;
+//             case'9':
+//                 PORTA = fndData[9];
+//                 break;
                     
-        }
+//         }
         
 
         
 
-    }
+//     }
     
-}
+// }
 
 
 
 
 
+
+// #include "ap.h"
+
+// void apInit()
+// {
+    
+// }
 
 
 
@@ -153,6 +176,14 @@ void apMain()
  * 
  * 
  */
+
+
+// #include "ap.h"
+
+// void apInit()
+// {
+    
+// }
 
 // void apMain()
 // {
@@ -210,6 +241,14 @@ void apMain()
  */
 
 
+// #include "ap.h"
+
+// void apInit()
+// {
+    
+// }
+
+
 // void apMain()
 // {
 //     pwmInit();
@@ -218,7 +257,7 @@ void apMain()
 
 //     char data;
 
-    
+
 
 //     while (1)
 //     {
@@ -242,11 +281,118 @@ void apMain()
             
                     
 //         }
-        
-
-        
 
 //     }
 
+// }
+
+
+
+/**
+ * @brief delay 함수 활용
+ * Nomalmode 사용
+ */
+
+
+
+
+//  #include "ap.h"
+
+// void apInit()
+// {
     
 // }
+
+// void apMain()
+// {
+//     DDRD = 0xff;
+
+//     delayInit();
+
+//     while(1)
+//     {
+//         PORTD = 0x00;
+//         delay_ms(300);
+//         PORTD = 0xff;
+//         delay_ms(300);
+//     }
+// }
+
+
+/**
+ * @brief millis 함수 활용
+ * CTCmode 사용
+ * 
+ */
+
+
+// #include "ap.h"
+
+// void apInit()
+// {
+    
+// }
+
+
+// void apMain()
+// {
+//     DDRD |= (1 << PD7) | (1 << PD0);
+
+//     millisInit();
+
+//     uint32_t prevTime1 = 0;
+//     uint32_t prevTime2 = 0;
+
+//     while(1)
+//     {
+//         uint32_t now = millis();
+        
+//         // 1000ms 토글
+//         if(now - prevTime1 >= 500)
+//         {
+//             prevTime1 = now;
+//             PORTD ^= (1 << PORTD7);
+//         }
+
+//         // 2000ms 토글
+//         if(now - prevTime2 >= 1000)
+//         {
+//             prevTime2 = now;
+//             PORTD ^= (1 << PORTD0);
+//         }
+
+
+//     }
+// }
+
+# include "./ap.h"
+
+void apInit()
+{
+
+}
+
+void apMain()
+{
+
+    LCD_Init();
+
+    LCD_GotoXY(0, 0);
+    LCD_WriteString("Hello I2C");
+    LCD_GotoXY(1, 0);
+    LCD_WriteString("Hello 4Bit LCD");
+
+    // char buff[30];
+
+    // sprintf(buff, "Hello AVR");
+    // LCD_WriteStringXY(0, 0, buff);
+
+    // int count = 0;
+
+    while(1)
+    {
+        // sprintf(buff, "count : %d", count++);
+        // LCD_WriteStringXY(1, 0, buff);
+        // _delay_ms(500);
+    }
+}
