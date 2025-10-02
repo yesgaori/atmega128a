@@ -264,7 +264,7 @@
 //         data = UART0_Receive();
 //         UART0_Transmit(data);
         
-//         //7세그먼트
+//         
 //         switch(data)
 //         {
 //             case'0':
